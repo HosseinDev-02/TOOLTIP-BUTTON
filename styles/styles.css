@@ -1,0 +1,312 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* Start Codding Styles */
+
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(36, 36, 36);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo__wrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.logo-message {
+    background: linear-gradient(135deg, rgba(12, 12, 12, 0.8), rgba(54, 54, 54, 0.3));
+    box-shadow: -7px -9px 1rem 0px rgb(51 51 51 / 50%);
+    border-radius: 12px;
+    padding: 12px;
+    color: white;
+    position: absolute;
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+
+.logo__wrapper:hover .logo-message {
+    opacity: 1;
+    transform: translateY(-140px);
+}
+
+.logo-message__content {
+    border: 1px solid #1f597e;
+    background-color: rgb(36, 36, 36);
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+}
+
+
+.user-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.user-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+.user-details { 
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.user-name {
+    color: #1da1f2;
+    font-size: 18px;
+    font-weight: bold;
+}
+.user-username {
+    
+}
+.logo-message__content-text {
+    color: #cacaca;
+    font-size: 18px;
+    display: inline-block;
+    margin-top: 12px;
+}
+
+.logo {
+    background-color: #000;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #1da1f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all 200ms ease-in;
+    position: relative;
+}
+
+.logo__wrapper .logo:hover {
+    transform: rotate(-35deg) skew(20deg) scale(1.1);
+}
+
+.logo:hover .logo-border:nth-child(2) {
+    opacity: 1;
+    transform: translate(-7px, 7px);
+}
+
+.logo:hover .logo-border:nth-child(3) {
+    opacity: 0.8;
+    transform: translate(-11px, 11px);
+}
+
+.logo:hover .logo-border:nth-child(4) {
+    opacity: 0.6;
+    transform: translate(-15px, 15px);
+}
+
+.logo:hover .logo-border:nth-child(5) {
+    opacity: 0.4;
+    transform: translate(-19px, 19px);
+}
+
+.logo:hover span {
+    box-shadow: -3px 4px 6px 0px rgb(69 146 185 / 10%);
+}
+
+.logo-icon__wrapper {
+    font-size: 30px;
+    fill: #1da1f2;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    border-radius: 4px;
+}
+
+.logo-icon {
+    /* width: 28px; */
+    /* height: 28px; */
+}
+
+.logo .logo-border {
+    border: 1px solid #1da1f2;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    transition: all 200ms ease-in;
+    z-index: -1;
+}
+
+.text {
+    color: #1da1f2;
+    position: absolute;
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: auto;
+    opacity: 0;
+    transition: all 200ms ease-in;
+}
+
+.logo__wrapper:hover .text {
+    opacity: 1;
+    transform: translateY(100px);
+}
+
+/* Finish Codding Styles */
